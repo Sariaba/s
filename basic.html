@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>
+		{% block title %}
+		
+		{% endblock title %}
+	</title>
+</head>
+<body>
+
+	<!--start header-->
+    <table id="header" border="0" width="100%" cellpading="0" cellspacing="0" bgcolor="#3971b">
+        <tr>
+            <td>
+                <table border="0" width="85%" cellpadding="15" cellspacing="0" align="center">
+                    <tr>
+                        <td>
+                            <font face="arial" color="#000000" size="6">
+                                <img src="{% static "Saria.png" %}" alt="Avatar" style="vertical-align: middle; width: 50px; height: 50px; border-radius: 50%;"> 
+                                <b>Saria Banu</b>
+                            </font>
+                        </td>
+                        <td width="20%">
+                            &nbsp;
+                        </td>
+                    </tr>
+
+                </table>
+            </td>
+			<td>
+				<div style="font-size: 30px; text-align: end;
+					padding-right: 50px; text-indent: 10px; word-spacing: 200%;
+					font-family: Arial, Helvetica, sans-serif;">
+					<a href="/"><b>Home</b></a>
+					<a href="/about"><b>About</b></a>
+					<a href="/education"><b>Education</b></a>
+					<a href="/skills"><b>Skills</b></a>
+					<a href="/contact"><b>Contact</b></a>
+					<a href="/admin/auth/user"><b>Admin</b></a>
+				</div>
+			</td>
+        </tr>
+    </table>
+	{% block body %}
+	  
+	{% endblock body %}
+</body>
+</html>
